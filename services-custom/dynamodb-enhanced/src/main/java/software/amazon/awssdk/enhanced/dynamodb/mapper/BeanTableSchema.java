@@ -192,7 +192,7 @@ public final class BeanTableSchema<T> implements TableSchema<T> {
                                                                 .newItemSupplier(newObjectSupplier);
 
         Optional<AttributeConverterProvider> attributeConverterProvider = converterProviderAnnotation(dynamoDbBean);
-        attributeConverterProvider.ifPresent(builder::attributeConverterProvider);
+        attributeConverterProvider.ifPresent(builder::attributeConverterProviders);
 
         List<StaticAttribute<T, ?>> attributes = new ArrayList<>();
 
